@@ -1,7 +1,7 @@
 # ATG-NLP
 Code relevant for training and evaluating NLPs from free text using Auxilliary Task Guiding (ATG).
 
-The code is inspired by [this](https://keras.io/examples/nlp/text_extraction_with_bert/) example from the Keras.io page. In this project we have used TensorFlow 2.4 to train neural networks. The datasets used are from the [Huggingface/datasets Hub](https://huggingface.co/datasets). We have used a pretrained [BERT](https://arxiv.org/abs/1810.04805) model from the [transformers](https://pypi.org/project/transformers/) library.
+The code is inspired by [this](https://keras.io/examples/nlp/text_extraction_with_bert/) example from the Keras.io page. In this project we have used TensorFlow 2.4 to train neural networks. The datasets used are from the [Huggingface/datasets Hub](https://huggingface.co/datasets). We have used a pretrained [BERT](https://arxiv.org/abs/1810.04805) model from the [transformers](https://pypi.org/project/transformers/) library for feature extraction.
 
 
 ### How to use?
