@@ -1,4 +1,5 @@
 import re
+import string
 import numpy as np
 from tensorflow import keras
 
@@ -28,14 +29,15 @@ class ExactMatch(keras.callbacks.Callback):
     from model predictions matches one of the ground-truth answers.
     """
 
-    def __init__(self, x_eval, y_eval):
+    def __init__(self, x_eval, y_eval, eval_squad_examples):
         self.x_eval = x_eval
         self.y_eval = y_eval
+        self.eval_squad_examples = eval_squad_examples
 
     def on_epoch_end(self, epoch, logs=None):
         pred_start, pred_end = self.model.predict(self.x_eval)
         count = 0
-        eval_examples_no_skip = [_ for _ in eval_squad_examples if _.skip == False]
+        eval_examples_no_skip = [_ for _ in self.eval_squad_examples if _.skip == False]
         for idx, (start, end) in enumerate(zip(pred_start, pred_end)):
             squad_eg = eval_examples_no_skip[idx]
             offsets = squad_eg.context_token_to_char

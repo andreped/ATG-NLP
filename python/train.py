@@ -11,6 +11,8 @@ from create_data import SquadExample, create_squad_examples, create_inputs_targe
 from models import create_model
 from utils import ExactMatch
 
+print("\n code has been updated...")
+
 
 # code based on:
 # https://keras.io/examples/nlp/text_extraction_with_bert/
@@ -51,7 +53,7 @@ x_eval, y_eval = create_inputs_targets(eval_squad_examples)
 print(f"{len(eval_squad_examples)} evaluation points created.")
 
 ## create model
-use_tpu = False  # default: True (will use TPU)
+use_tpu = True  # default: True (will use TPU)
 if use_tpu:
     # Create distribution strategy
     tpu = tf.distribute.cluster_resolver.TPUClusterResolver()
@@ -72,12 +74,12 @@ optimizer = keras.optimizers.Adam(lr=5e-5)
 model.compile(optimizer=optimizer, loss=[loss, loss])
 
 ## train and evaluate
-exact_match_callback = ExactMatch(x_eval, y_eval)
+exact_match_callback = ExactMatch(x_eval, y_eval, eval_squad_examples)
 model.fit(
     x_train,
     y_train,
-    epochs=1,  # For demonstration, 3 epochs are recommended
-    verbose=2,
+    epochs=10,  # For demonstration, 3 epochs are recommended
+    verbose=1,  # 2
     batch_size=64,  # 64
     callbacks=[exact_match_callback],
 )
