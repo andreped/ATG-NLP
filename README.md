@@ -1,6 +1,16 @@
 # ATG-NLP
-Code relevant for training and evaluating NLPs from free text using Auxilliary Task Guiding (ATG)
+Code relevant for training and evaluating NLPs from free text using Auxilliary Task Guiding (ATG).
 
+The code is inspired by [this](https://keras.io/examples/nlp/text_extraction_with_bert/) example from the Keras.io page. In this project we have used TensorFlow 2.4 to train neural networks. The datasets used are from the [Huggingface/datasets Hub](https://huggingface.co/datasets). We have used a pretrained [BERT](https://arxiv.org/abs/1810.04805) model from the [transformers](https://pypi.org/project/transformers/) library.
+
+
+### How to use?
+
+1. Add the project structure to a google drive
+2. Open Google Colab using a jupyter notebook from the notebooks/ folder
+3. Syncronize the google drive with the current colab project
+
+Then you are all set. Simply train an NLP executing the jupyter notebook.
 
 
 ### Project structure
@@ -39,9 +49,6 @@ Code relevant for training and evaluating NLPs from free text using Auxilliary T
 - [ ] Introduce more benchmark datasets, ideally that are suitable for a specific use case (currently not defined)
 - [ ] Implement MTL designs to test hypothesis
 - [ ] Write report
-
-
-
 
 
 ------
