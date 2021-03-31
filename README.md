@@ -3,6 +3,7 @@ Code relevant for training and evaluating NLPs from free text using Auxilliary T
 
 The code is inspired by [this](https://keras.io/examples/nlp/text_extraction_with_bert/) example from the Keras.io page. In this project we have used TensorFlow 2.4 to train neural networks. The datasets used are from the [Huggingface/datasets Hub](https://huggingface.co/datasets). We have used a pretrained [BERT](https://arxiv.org/abs/1810.04805) model from the [transformers](https://pypi.org/project/transformers/) library for feature extraction.
 
+------
 
 ### How to use?
 
@@ -12,6 +13,7 @@ The code is inspired by [this](https://keras.io/examples/nlp/text_extraction_wit
 
 Then you are all set. Simply train an NLP executing the jupyter notebook.
 
+------
 
 ### Project structure
 
@@ -37,6 +39,7 @@ Then you are all set. Simply train an NLP executing the jupyter notebook.
 |   |   |   +--- [...]
 ```
 
+------
 
 ### TODOs (most important from top to bottom):
 
